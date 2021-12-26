@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test "./PlcSimAdvancedInterface/ConsoleApp/ConsoleApp.csproj" --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish "./PlcSimAdvancedInterface/ConsoleApp/ConsoleApp.csproj" -c Release -o PlcSimAdvancedInterface
+      run: dotnet publish "./PlcSimAdvancedInterface/ConsoleApp/ConsoleApp.csproj" -c Release -o console-application
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
