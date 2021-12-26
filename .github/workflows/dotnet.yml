@@ -18,15 +18,15 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore "./PlcSimAdvancedInterface"
+      run: dotnet restore "./PlcSimAdvancedInterface/ConsoleApp.csproj"
     - name: Build
-      run: dotnet build "./PlcSimAdvancedInterface" --no-restore
+      run: dotnet build "./PlcSimAdvancedInterface/ConsoleApp.csproj" --no-restore
     - name: Test
-      run: dotnet test "./PlcSimAdvancedInterface" --no-build --verbosity normal
+      run: dotnet test "./PlcSimAdvancedInterface/ConsoleApp.csproj" --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish "./PlcSimAdvancedInterface" -c Release -o PlcSimAdvancedInterface
+      run: dotnet publish "./PlcSimAdvancedInterface/ConsoleApp.csproj" -c Release -o PlcSimAdvancedInterface
     - name: Upload
       uses: actions/upload-artifact@v2
       with:
-        name: plc-sim-advanced-interface
-        path: "./PlcSimAdvancedInterface"
+        name: console-app
+        path: "./PlcSimAdvancedInterface/ConsoleApp"
