@@ -17,10 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-        path: ./PlcSimAdvancedInterface
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./PlcSimAdvancedInterface
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build ./PlcSimAdvancedInterface --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./PlcSimAdvancedInterface --no-build --verbosity normal
