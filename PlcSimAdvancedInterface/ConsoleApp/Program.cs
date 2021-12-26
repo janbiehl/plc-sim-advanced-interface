@@ -22,3 +22,5 @@ catch
     Console.WriteLine("There was an error parsing the command line arguments");
     return -1;
 }
+
+return 0;
